@@ -21,6 +21,13 @@ tomorrow = new Date().getTime() + 24 * 60 * 60 * 1000;
 order_dispatch_target = 1 * 60 * 60 * 1000;
 pipeline = [
   {
+    $match: {
+      relatesTo: {
+        $exists: false,
+      },
+    },
+  },
+  {
     $addFields: {
       expected_pick_time: {
         $dateAdd: {

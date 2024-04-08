@@ -27,7 +27,7 @@ def generate_line_items(num_items):
         line_items.append(line_item)
     return line_items
 
-for i in range(100000):
+for i in range(10000):
 
     line_items = generate_line_items(random.randint(1, 10))
     # magic number on the store_id ------ OR IS IT????

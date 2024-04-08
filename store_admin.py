@@ -15,7 +15,9 @@ try:
     orders = orders_collection.find({})
     print(list(orders))
 except Exception as e:
-    print("We are unable to search orders. You should only be looking at store picks", e)
+    print("\nWe are unable to search orders. You should only be looking at store picks")
+    pprint.pprint(e)
+    print("\n\n")
 
 picks_view = db['failed_picks']
 store_id = 1
