@@ -55,7 +55,7 @@ const failed_picks = db
   .getCollection("failed_picks")
   .find({ store_id: store_id })
   .count();
-console.log(`${failed_picks} failed picks`);
+//console.log(`${failed_picks} failed picks`);
 
 const failed_picks_peek = db
   .getCollection("failed_picks")
